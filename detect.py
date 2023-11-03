@@ -42,7 +42,8 @@ if str(ROOT) not in sys.path:
     sys.path.append(str(ROOT))  # add ROOT to PATH
 ROOT = Path(os.path.relpath(ROOT, Path.cwd()))  # relative
 
-from ultralytics.utils.plotting import Annotator, colors, save_one_box
+from ultralytics.utils.plotting import Annotator, colors#, save_one_box
+from utils.plots import save_one_box
 
 from models.common import DetectMultiBackend
 from utils.dataloaders import IMG_FORMATS, VID_FORMATS, LoadImages, LoadScreenshots, LoadStreams
@@ -82,7 +83,7 @@ def run(
         vid_stride=1,  # video frame-rate stride
 ):
 
-    save_one_box()
+    #save_one_box()
     
     source = str(source)
     save_img = not nosave and not source.endswith('.txt')  # save inference images
