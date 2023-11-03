@@ -179,7 +179,7 @@ def run(
                     if save_crop:
                         #print(save_dir / 'crops' / names[c] / f'{p.stem}.jpg')
                         c, cfile = save_one_box(xyxy, imc, file=save_dir / 'crops' / names[c] / f'{p.stem}.jpg', BGR=True)
-                        print(cfile)
+                        #print(cfile)
 
             # Stream results
             im0 = annotator.result()
